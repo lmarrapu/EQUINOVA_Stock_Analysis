@@ -1,71 +1,74 @@
-\documentclass{article}
-\usepackage[margin=1in]{geometry}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue
-}
+# 📊 EquiNova: Smart Trading Analytics Platform
 
-\title{\textbf{EquiNova: A Smart Stock Analysis and Forecasting Platform}}
-\author{Likhitha Marrapu}
-\date{}
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://equinovastockanalysis-mywkt7xwpcqhfhyjjj.streamlit.app/)
 
-\begin{document}
+## 🔍 Overview
 
-\maketitle
+**EquiNova** is a powerful, interactive stock analytics and forecasting web application that merges real-time market data with advanced statistical modeling. Built using Streamlit and powered by live Yahoo Finance data, this platform offers traders and investors a comprehensive toolkit for making data-driven decisions.
 
-\section*{🌐 Live Demo}
-Experience the platform here: \\
-\href{https://equinovastockanalysis-mywkt7xwpcqhfycgfhyjjj.streamlit.app/}{\texttt{https://equinovastockanalysis.streamlit.app}}
+The application transforms complex financial data into actionable insights through dynamic visualizations, AI-powered forecasting, and intuitive anomaly detection - all within a clean, user-friendly interface.
 
-\section*{🔍 Project Overview}
-\textbf{EquiNova} is an end-to-end, interactive stock analytics and forecasting platform developed in \texttt{VS Code} using \texttt{Streamlit}. It leverages real-time data from \texttt{Yahoo Finance} to deliver dynamic visualizations, anomaly detection, and intelligent forecasting for better trading decisions.
+> 🌐 **[Live Demo](https://equinovastockanalysis-mywkt7xwpcqhfycgfhyjjj.streamlit.app/)**
 
-\vspace{0.5em}
-\textit{Purpose:} Empower users to understand market behavior, detect unusual movements, and anticipate future trends through an intuitive, AI-assisted interface.
+## ✨ Key Features
 
-\section*{🚀 Key Features}
-\begin{itemize}
-    \item \textbf{Market Pulse:} View company insights, financial ratios, and interactive charts including RSI, MACD, and Moving Averages.
-    \item \textbf{Price Forecast:} Predict next 30-day closing prices with ARIMA-based time series models, evaluated using RMSE.
-    \item \textbf{Trade Alert:} Detect anomalies (spikes/dips) using Z-score with emoji markers and dynamic chart insights.
-    \item \textbf{Live Index Snapshot:} Real-time updates for S\&P 500, NASDAQ, DOW JONES, and VIX with percentage movement indicators.
-\end{itemize}
+### 📈 Market Pulse
+- **Real-time stock analysis** with detailed company information
+- **Technical indicators** including RSI, MACD, and Moving Averages
+- **Financial metrics** visualization with interactive charts
+- **Historical performance** analysis with customizable date ranges
 
-\section*{🧠 Technologies and Tools}
-\begin{itemize}
-    \item \textbf{Frontend/UI:} Streamlit, HTML/CSS, PIL
-    \item \textbf{Backend/Data Handling:} yfinance, pandas, numpy
-    \item \textbf{Statistical Modeling:} ARIMA (via statsmodels), Z-score, StandardScaler
-    \item \textbf{Visualization:} Plotly (line charts, candlesticks, tables, anomaly markers)
-    \item \textbf{Development Environment:} Visual Studio Code (VS Code)
-\end{itemize}
+### 🔮 Price Forecast
+- **30-day closing price prediction** using advanced ARIMA time series modeling
+- **Statistical accuracy metrics** (RMSE evaluation) for forecast reliability
+- **Trend identification** with confidence intervals
+- **Model performance visualization** with actual vs. predicted comparisons
 
-\section*{📂 Project Structure}
-\begin{itemize}
-    \item \texttt{Trading\_App.py} \hfill --- Home page with live index and navigation
-    \item \texttt{market\_pulse.py} \hfill --- Stock performance and indicator dashboard
-    \item \texttt{price\_forecast.py} \hfill --- ARIMA-based forecasting and evaluation
-    \item \texttt{trade\_alert.py} \hfill --- Real-time anomaly detection via Z-score
-    \item \texttt{utils/} \hfill --- Utility scripts for modeling and visualization
-\end{itemize}
+### 🚨 Trade Alert
+- **Automated anomaly detection** using sophisticated Z-score analysis
+- **Market spike and dip identification** with clear visual markers
+- **Emoji-based anomaly timelines** for quick pattern recognition
+- **Custom alert thresholds** for personalized trading strategies
 
-\section*{📈 Forecasting Logic}
-Forecasting is driven by the \textbf{ARIMA} algorithm, which models trends in historical closing prices after performing stationarity checks. Outputs are inverse-transformed and paired with RMSE metrics to ensure accurate, interpretable results.
+### 💹 Live Market Overview
+- **Real-time index tracking** for S&P 500, NASDAQ, DOW JONES, and VIX
+- **Trend visualization** with dynamic markers and color coding
+- **At-a-glance market sentiment** indicators
+- **Responsive updates** reflecting current market conditions
 
-\section*{📌 How to Run Locally}
-\begin{verbatim}
-git clone https://github.com/your-username/equinova.git
-cd equinova
-pip install -r requirements.txt
-streamlit run Trading_App.py
-\end{verbatim}
+## 🛠️ Tech Stack
 
-\section*{📫 Author}
-Created with 💡 by \textbf{Likhitha Marrapu} \\
-\href{https://www.linkedin.com/in/likhitha-marrapu-9964001b4/}{LinkedIn} |
-\href{https://github.com/lmarrapu}{GitHub}
+- **Frontend/UI**: Streamlit, HTML/CSS, PIL
+- **Data Processing**: yfinance, pandas, numpy
+- **Statistical Modeling**: statsmodels (ARIMA), Z-score analysis, StandardScaler
+- **Data Visualization**: Plotly (interactive candlestick charts, line charts, tables, timelines)
+- **Development Environment**: VS Code
 
-\end{document}
+## 🧮 Forecasting Methodology
+
+EquiNova employs **ARIMA (AutoRegressive Integrated Moving Average)** modeling to deliver accurate price forecasts:
+
+1. Time series transformation to achieve stationarity
+2. Parameter optimization through grid search
+3. Forward prediction with confidence intervals
+4. Performance evaluation using RMSE and relative error metrics
+5. Inverse scaling for intuitive price representation
+
+Our dynamic approach to time series analysis ensures adaptability to changing market conditions while maintaining forecast reliability.
+
+## 📂 Project Structure
+equinova/
+├── Trading_App.py          # Home page with market overview and navigation
+├── market_pulse.py         # Interactive stock analytics module
+├── price_forecast.py       # Predictive modeling and visualization
+├── trade_alert.py          # Anomaly detection system
+├── utils/                  # Helper functions and utilities
+│   ├── modeling.py         # Statistical models and algorithms
+│   ├── visualization.py    # Chart generation functions
+│   └── data_processing.py  # Data transformation utilities
+├── requirements.txt        # Project dependencies
+└── README.md               # Project documentation
+
+
+
+### ⭐️ **If you find this repository useful, give it a star!**
