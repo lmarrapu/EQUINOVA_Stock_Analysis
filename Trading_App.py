@@ -9,7 +9,7 @@ def get_market_data():
         "S&P 500": "^GSPC",
         "NASDAQ": "^IXIC",
         "DOW JONES": "^DJI",
-        "VOLATILITY": "^VIX"
+       
     }
 
     try:
