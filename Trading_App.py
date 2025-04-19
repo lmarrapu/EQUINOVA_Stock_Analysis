@@ -170,7 +170,7 @@ with col3:
 
 # How It Works
 st.markdown("## 🧭 Your Trading Journey")
-col1, col2, col3 = st.columns(3)
+col1, col2, col3,col4 = st.columns(4)
 
 with col1:
     st.markdown("""
@@ -193,5 +193,12 @@ with col3:
         <div class='feature-card'>
             <h4>3️⃣ Unlock Future Predictions</h4>
             <p>Visualize intelligent 30-day projections that help guide your timing, strategy, and confidence in trades.</p>
+        </div>
+    """, unsafe_allow_html=True)
+with col4:
+    st.markdown("""
+        <div class='feature-card'>
+            <h4>4️⃣ Spot Market Anomalies</h4>
+            <p>Catch unusual price spikes or dips in real time with smart Z-score-based detection to enhance trade decisions.</p>
         </div>
     """, unsafe_allow_html=True)
