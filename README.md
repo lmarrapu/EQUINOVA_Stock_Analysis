@@ -31,7 +31,7 @@ The application transforms complex financial data into actionable insights throu
 - **Custom alert thresholds** for personalized trading strategies
 
 ### 💹 Live Market Overview
-- **Real-time index tracking** for S&P 500, NASDAQ, DOW JONES, and VIX
+- **Real-time index tracking** for S&P 500, NASDAQ and DOW JONES
 - **Trend visualization** with dynamic markers and color coding
 - **At-a-glance market sentiment** indicators
 - **Responsive updates** reflecting current market conditions
@@ -55,20 +55,6 @@ EquiNova employs **ARIMA (AutoRegressive Integrated Moving Average)** modeling t
 5. Inverse scaling for intuitive price representation
 
 Our dynamic approach to time series analysis ensures adaptability to changing market conditions while maintaining forecast reliability.
-
-## 📂 Project Structure
-equinova/
-├── Trading_App.py          # Home page with market overview and navigation
-├── market_pulse.py         # Interactive stock analytics module
-├── price_forecast.py       # Predictive modeling and visualization
-├── trade_alert.py          # Anomaly detection system
-├── utils/                  # Helper functions and utilities
-│   ├── modeling.py         # Statistical models and algorithms
-│   ├── visualization.py    # Chart generation functions
-│   └── data_processing.py  # Data transformation utilities
-├── requirements.txt        # Project dependencies
-└── README.md               # Project documentation
-
 
 
 ### ⭐️ **If you find this repository useful, give it a star!**
