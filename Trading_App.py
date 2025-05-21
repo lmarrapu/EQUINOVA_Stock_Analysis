@@ -13,10 +13,10 @@ def get_market_data():
     }
 
     try:
-        data = yf.download(list(tickers.values()), period="5d", interval="1d", group_by="ticker"  )
-        # if data.empty:
-        #     # fallback if data unavailable
-        #     data = yf.download(list(tickers.values()), period="5d", interval="1d", group_by="ticker")
+        data = yf.download(list(tickers.values()), period="1d", interval="1m", group_by="ticker")
+        if data.empty:
+            # fallback if data unavailable
+            data = yf.download(list(tickers.values()), period="5d", interval="1d", group_by="ticker")
     except:
         return {k: {'last': 'N/A', 'change': 'N/A', 'status': 'neutral'} for k in tickers.keys()}
 
